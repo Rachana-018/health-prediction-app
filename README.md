@@ -199,52 +199,8 @@ Base URL: `http://localhost:5000/api`
 | `PUT` | `/patients/:id` | Update patient + regenerate AI remark | JSON body (partial ok) |
 | `DELETE` | `/patients/:id` | Delete a patient | — |
 
-### Request Body (POST / PUT)
 
-```json
-{
-  "full_name":     "Priya Sharma",
-  "date_of_birth": "1990-05-15",
-  "email":         "priya@example.com",
-  "glucose":       130.0,
-  "haemoglobin":   10.5,
-  "cholesterol":   240.0
-}
-```
 
-### Success Response (201 Created)
-
-```json
-{
-  "success": true,
-  "data": {
-    "id": 1,
-    "full_name": "Priya Sharma",
-    "date_of_birth": "1990-05-15",
-    "email": "priya@example.com",
-    "glucose": 130.0,
-    "haemoglobin": 10.5,
-    "cholesterol": 240.0,
-    "remarks": "[Overall Risk: High] Elevated glucose (130.0 mg/dL) — possible Diabetes. Consult endocrinologist. | Mild-moderate Anaemia (Hb 10.5 g/dL). | High cholesterol (240.0 mg/dL) — elevated CV risk. | NOTE: AI-generated — always consult a physician.",
-    "created_at": "2026-05-31T10:00:00",
-    "updated_at": "2026-05-31T10:00:00"
-  }
-}
-```
-
-### Error Response (400 Bad Request)
-
-```json
-{
-  "success": false,
-  "errors": [
-    "Date of birth cannot be today or a future date.",
-    "Glucose must be numeric."
-  ]
-}
-```
-
----
 
 ## 🤖 AI Health Prediction Logic
 
