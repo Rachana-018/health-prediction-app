@@ -1,0 +1,36 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap");
+
+:root {
+  --bg:           #f4f7f6;
+  --surface:      #ffffff;
+  --surface-alt:  #eef3f1;
+  --border:       #d8e3df;
+  --text-primary: #1a2e28;
+  --text-muted:   #5a7a72;
+  --accent:       #00917c;
+  --accent-dark:  #006b5c;
+  --accent-light: #e0f4f0;
+  --danger:       #e53e3e;
+  --warning:      #dd6b20;
+  --warning-bg:   #fff3e0;
+  --success:      #38a169;
+  --success-bg:   #e6f9f0;
+  --radius:       10px;
+  --shadow:       0 2px 12px rgba(0,0,0,0.07);
+  --shadow-lg:    0 8px 32px rgba(0,0,0,0.12);
+  --transition:   0.2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: "DM Serif Display", serif; }
+button, input, textarea, select { font-family: inherit; cursor: pointer; }
